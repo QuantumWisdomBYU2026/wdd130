@@ -1,78 +1,60 @@
-/* ================================
-   WDD130 – Week 2 CSS Introduction
-   ================================ */
-
-body {
-  max-width: 900px;
-  margin: 0 auto;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #f9fafb;
-}
-
-/* Navigation Bar */
 nav {
   background-color: darkblue;
   padding: 10px;
-  text-align: center;
 }
 
-nav a {
+
   color: white;
-  display: inline-block;
+  display: block;
   padding: 20px;
   text-decoration: none;
 }
 
-nav a:hover {
-  background-color: #003399;
+main {
+  max-width: 900px;
 }
 
-/* Headings */
+
 h1 {
   color: darkblue;
-  text-align: center;
 }
 
-h2 {
-  color: darkblue;
-}
-
-/* Images */
-img {
+main img {
   width: 150px;
   height: auto;
   border: 1px solid black;
   padding: 2px;
   box-shadow: 0 0 30px gray;
-  display: block;
-  margin: 10px auto;
 }
 
-/* Text */
-p {
-  padding: 10px;
-  line-height: 1.6;
-}
-
-/* Layout */
-main, aside {
-  background-color: white;
-  padding: 1rem;
+aside {
+  width: 300px;
   margin: 1rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-main {
-  text-align: center;
-}
-
-/* Footer */
-footer {
-  text-align: center;
+  border: 1px solid black;
   padding: 1rem;
-  color: white;
-  background-color: darkblue;
-  margin-top: 2rem;
-  border-radius: 5px;
+  background-color: white;
+  color: black;
 }
+
+aside img {
+  width: 200px;
+  height: auto;
+  border: 1px solid black;      
+  padding: 2px;                  
+  box-shadow: 0 0 30px gray;    
+}
+
+
+p {
+  padding: 0;
+}
+
+
+footer {
+  margin-top: 2rem;
+  border-top: 1px solid black;
+  text-align: center;
+}
+
+
+body { font-family: Arial, Helvetica, sans-serif; background: #f9fafb; }
