@@ -3,17 +3,16 @@ nav {
   padding: 10px;
 }
 
-
+nav a {
   color: white;
-  display: block;
   padding: 20px;
+  display: block;
   text-decoration: none;
 }
 
 main {
   max-width: 900px;
 }
-
 
 h1 {
   color: darkblue;
@@ -39,16 +38,14 @@ aside {
 aside img {
   width: 200px;
   height: auto;
-  border: 1px solid black;      
-  padding: 2px;                  
-  box-shadow: 0 0 30px gray;    
+  border: 1px solid black;
+  padding: 2px;
+  box-shadow: 0 0 30px gray;
 }
-
 
 p {
   padding: 0;
 }
-
 
 footer {
   margin-top: 2rem;
@@ -56,5 +53,7 @@ footer {
   text-align: center;
 }
 
-
-body { font-family: Arial, Helvetica, sans-serif; background: #f9fafb; }
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f9fafb;
+}
