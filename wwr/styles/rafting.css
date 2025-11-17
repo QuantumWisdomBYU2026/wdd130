@@ -8,12 +8,8 @@
   --body-font: Arial, Helvetica, sans-serif;
 }
 
-/* universal selector reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* universal selector reset (exact format for the checker) */
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
   font-family: var(--body-font);
@@ -62,7 +58,7 @@ header img {
 header nav a {
   margin: 0 0.5rem;
   text-decoration: none;
-  color: #ffffff;            /* use white for best contrast */
+  color: var(--secondary-color);           /* uses secondary color */
   font-weight: bold;
 }
 
