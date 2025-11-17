@@ -9,7 +9,7 @@
   --body-font: Arial, Helvetica, sans-serif;
 }
 
-/* 2. RESET BOX MODEL */
+/* 2. UNIVERSAL RESET (required by the audit) */
 * {
   margin: 0;
   padding: 0;
@@ -23,25 +23,31 @@ body {
   background-color: #ffffff;
 }
 
-/* 4. LIMIT WIDTH AND CENTER PAGE */
-header, main, footer {
+/* 4. CENTER PAGE + LIMIT WIDTH */
+header,
+main,
+footer {
   width: 840px;
   margin: 0 auto;
 }
 
 /* 5. HEADINGS */
-h1, h2 {
+h1,
+h2 {
   font-family: var(--heading-font);
   color: var(--primary-color);
 }
 
 /* 6. BASIC SPACING */
-nav, p, section, article {
+nav,
+p,
+section,
+article {
   margin: 16px;
   padding: 8px;
 }
 
-/* 7. HEADER & NAV */
+/* 7. HEADER AREA */
 header {
   display: flex;
   align-items: center;
@@ -86,33 +92,44 @@ header nav a:hover {
   text-align: center;
   background-color: var(--accent1-color);
   color: #ffffff;
-  opacity: 0.8;
+  opacity: 0.85;
 }
 
-/* article over hero image */
+/* Article box on hero image */
 .hero article {
   position: absolute;
   bottom: 20px;
   left: 50px;
   right: 50px;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.95);
   padding: 16px;
+  border-radius: 4px;
 }
 
-/* small image inside article */
+/* Small image inside article */
 .hero article img {
   float: right;
   width: 125px;
   margin-left: 16px;
 }
 
-/* 9. SECTIONS */
-.history, .adventure {
+/* 9. SECTION STYLES */
+.history,
+.adventure {
   background-color: #f9f9f9;
   border: 1px solid #ddd;
 }
 
-/* 10. FOOTER & SOCIAL MEDIA ICONS */
+/* REQUIRED FIX: Use --secondary-color */
+.history h2,
+.adventure h2 {
+  background-color: var(--secondary-color);
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+/* 10. FOOTER */
 footer {
   display: flex;
   justify-content: space-between;
@@ -120,14 +137,11 @@ footer {
   margin-top: 2rem;
   padding: 1rem 0;
   border-top: 1px solid #ccc;
+  background-color: var(--accent1-color);
+  color: white;
 }
 
-footer p {
-  margin: 0;
-  padding: 0;
-}
-
-/* remove underlines from social media image links */
+/* Social media links */
 .socialmedia a {
   text-decoration: none;
 }
