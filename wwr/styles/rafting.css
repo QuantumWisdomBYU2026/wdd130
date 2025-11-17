@@ -19,7 +19,7 @@
 /* 3. BODY */
 body {
   font-family: var(--body-font);
-  color: var(--accent1-color);
+  color: var(--accent1-color);      /* main text color */
   background-color: #ffffff;
 }
 
@@ -52,7 +52,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--accent1-color);  /* dark bar behind logo + nav */
+  background-color: var(--accent1-color);  /* dark bar */
   color: var(--accent2-color);
   padding: 1rem;
 }
@@ -64,7 +64,7 @@ header img {
 header nav a {
   margin: 0 0.5rem;
   text-decoration: none;
-  color: var(--secondary-color); /* orange links */
+  color: var(--secondary-color);          /* orange links */
   font-weight: bold;
 }
 
@@ -74,7 +74,7 @@ header nav a:hover {
 
 /* 8. HERO AREA */
 .hero {
-  position: relative;           /* base for absolutely-positioned children */
+  position: relative;                     /* so h1 & article can be absolute */
 }
 
 .hero img {
@@ -83,15 +83,15 @@ header nav a:hover {
   height: auto;
 }
 
-/* h1 overlay on hero image – fixed contrast issue */
+/* h1 overlay on hero image – HIGH CONTRAST */
 .hero h1 {
   position: absolute;
   top: 20px;
   width: 100%;
   padding: 16px;
   text-align: center;
-  background-color: rgba(38, 70, 83, 0.9); /* dark overlay */
-  color: #ffffff;                           /* white text for strong contrast */
+  background-color: rgba(38, 70, 83, 0.9);  /* dark overlay */
+  color: #ffffff;                            /* white text – passes contrast */
 }
 
 /* article overlay on hero image */
@@ -115,7 +115,7 @@ header nav a:hover {
 .history,
 .adventure {
   background-color: #f9f9f9;
-  border: 2px solid var(--accent2-color);   /* uses accent2-color variable */
+  border: 2px solid var(--accent2-color);   /* uses accent2-color */
 }
 
 /* 10. FOOTER & SOCIAL MEDIA ICONS */
@@ -133,7 +133,7 @@ footer p {
   padding: 0;
 }
 
-/* remove underlines from social media image links */
+/* social media links */
 .socialmedia a {
   text-decoration: none;
 }
