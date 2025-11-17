@@ -1,33 +1,33 @@
 /* 1. CSS VARIABLES (colors and fonts) */
 :root {
-  --primary-color: #024873;     /* dark blue */
-  --secondary-color: #f4a261;   /* warm orange */
-  --accent1-color: #264653;     /* slate blue */
-  --accent2-color: #e9c46a;     /* light yellow */
+  --primary-color: #024873;     /* dark blue for titles */
+  --secondary-color: #f4a261;   /* orange for accents (nav text, highlights) */
+  --accent1-color: #264653;     /* dark teal for header background */
+  --accent2-color: #e9c46a;     /* light yellow for subtle backgrounds */
 
   --heading-font: "Georgia", "Times New Roman", serif;
   --body-font: Arial, Helvetica, sans-serif;
 }
 
-/* 2. UNIVERSAL RESET (required in the audit) */
+/* 2. UNIVERSAL RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* 3. BODY STYLES */
+/* 3. BODY */
 body {
   font-family: var(--body-font);
   color: var(--accent1-color);
   background-color: #ffffff;
 }
 
-/* 4. LIMIT WIDTH AND CENTER PAGE */
+/* 4. KEEP CONTENT NARROW AND CENTERED */
 header,
 main,
 footer {
-  max-width: 900px;
+  width: 840px;
   margin: 0 auto;
 }
 
@@ -39,48 +39,41 @@ h2 {
 }
 
 /* 6. BASIC SPACING */
-p,
-section,
-article {
-  margin: 1rem;
+main section,
+main p,
+main article {
+  margin: 16px;
+  padding: 8px;
 }
 
-nav {
-  margin: 0 1rem;
-}
-
-/* 7. HEADER & NAV */
+/* 7. HEADER & NAVIGATION */
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--accent1-color);
-  color: var(--accent2-color);
-  padding: 0.75rem 1rem;
+  background-color: var(--accent1-color); /* teal bar like the example */
+  padding: 1rem;
 }
 
 header img {
-  max-height: 70px;
+  max-height: 80px;
 }
 
 header nav a {
-  margin-left: 0.75rem;
+  margin-left: 1rem;
   text-decoration: none;
-  color: var(--accent2-color);
+  color: var(--secondary-color);  /* use secondary color here */
   font-weight: bold;
 }
 
 header nav a:hover {
-  background-color: var(--secondary-color); /* uses secondary variable */
-  color: var(--accent1-color);
-  padding: 0.25rem 0.5rem;
-  border-radius: 4px;
+  text-decoration: underline;
 }
 
-/* 8. HERO AREA */
+/* 8. HERO SECTION */
 .hero {
   position: relative;
-  margin-top: 1rem;
+  margin-top: 16px;
 }
 
 .hero img {
@@ -92,70 +85,63 @@ header nav a:hover {
 /* h1 over hero image */
 .hero h1 {
   position: absolute;
-  top: 1.5rem;
+  top: 20px;
   left: 0;
   right: 0;
-  padding: 1rem 0;
+  padding: 16px 0;
   text-align: center;
-  background-color: rgba(2, 72, 115, 0.85); /* based on primary color */
+  background-color: rgba(38, 70, 83, 0.9); /* based on accent1-color */
   color: #ffffff;
 }
 
-/* article card over hero image */
+/* article over hero image */
 .hero article {
   position: absolute;
-  bottom: 2rem;
-  left: 2rem;
-  right: 2rem;
+  bottom: 30px;
+  left: 50px;
+  right: 50px;
   background-color: rgba(255, 255, 255, 0.95);
-  padding: 1rem;
-  border: 1px solid #ddd;
+  padding: 16px;
+  border-top: 4px solid var(--secondary-color); /* use secondary color again */
 }
 
 /* small image inside article */
 .hero article img {
   float: right;
-  width: 150px;
-  height: auto;
-  margin-left: 1rem;
+  width: 125px;
+  margin-left: 16px;
 }
 
-/* 9. SECTIONS */
+/* 9. HISTORY & ADVENTURE SECTIONS */
 .history,
 .adventure {
   background-color: #f9f9f9;
   border: 1px solid #ddd;
-  margin-top: 1rem;
-  padding-bottom: 1rem;
 }
 
 .history h2,
 .adventure h2 {
-  background-color: var(--secondary-color);
-  color: var(--accent1-color);
-  padding: 0.5rem 1rem;
+  margin-bottom: 8px;
+  color: var(--primary-color);
 }
 
-.history p {
-  margin-top: 0.5rem;
-}
-
-/* 10. FOOTER & SOCIAL MEDIA ICONS */
+/* 10. FOOTER & SOCIAL ICONS */
 footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 1px solid #ccc;
   margin-top: 2rem;
   padding: 1rem 0;
+  border-top: 1px solid #ccc;
   font-size: 0.9rem;
 }
 
 footer p {
   margin: 0;
+  padding: 0;
 }
 
-/* remove underlines from social media image links */
+/* social media icons */
 .socialmedia a {
   text-decoration: none;
 }
@@ -163,5 +149,5 @@ footer p {
 .socialmedia img {
   width: 32px;
   height: 32px;
-  margin-left: 0.5rem;
+  margin-left: 8px;
 }
