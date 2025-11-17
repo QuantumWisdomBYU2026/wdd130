@@ -1,3 +1,11 @@
+/* 1. UNIVERSAL RESET (put FIRST!) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 2. CSS VARIABLES */
 :root {
   --primary-color: #024873;      /* dark blue text */
   --secondary-color: #f4a261;    /* warm orange (links) */
@@ -8,9 +16,7 @@
   --body-font: Arial, Helvetica, sans-serif;
 }
 
-/* universal selector reset (exact format for the checker) */
-* { margin: 0; padding: 0; box-sizing: border-box; }
-
+/* 3. BASE STYLES */
 body {
   font-family: var(--body-font);
   color: var(--accent1-color);
@@ -41,13 +47,13 @@ article {
   padding: 8px;
 }
 
-/* header & navigation */
+/* 4. HEADER & NAVIGATION */
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: var(--accent1-color);  /* dark teal bar */
-  color: #ffffff;                          /* white text in header */
+  color: #ffffff;
   padding: 1rem;
 }
 
@@ -58,7 +64,7 @@ header img {
 header nav a {
   margin: 0 0.5rem;
   text-decoration: none;
-  color: var(--secondary-color);           /* uses secondary color */
+  color: var(--secondary-color);           /* USES secondary-color variable */
   font-weight: bold;
 }
 
@@ -66,7 +72,7 @@ header nav a:hover {
   text-decoration: underline;
 }
 
-/* hero area */
+/* 5. HERO AREA */
 .hero {
   position: relative;
 }
@@ -85,7 +91,7 @@ header nav a:hover {
   padding: 16px;
   text-align: center;
   background-color: rgba(38, 70, 83, 0.9);  /* dark bar */
-  color: #ffffff;                           /* white text: high contrast */
+  color: #ffffff;                           /* white text */
 }
 
 /* hero article overlay */
@@ -96,7 +102,7 @@ header nav a:hover {
   right: 50px;
   background-color: rgba(255, 255, 255, 0.95);
   padding: 16px;
-  color: #000000;                           /* black on white */
+  color: #000000;
 }
 
 /* small image inside article */
@@ -106,14 +112,14 @@ header nav a:hover {
   margin-left: 16px;
 }
 
-/* content sections */
+/* 6. CONTENT SECTIONS */
 .history,
 .adventure {
   background-color: #f9f9f9;
   border: 2px solid var(--accent2-color);
 }
 
-/* footer & social media */
+/* 7. FOOTER & SOCIAL MEDIA */
 footer {
   display: flex;
   justify-content: space-between;
