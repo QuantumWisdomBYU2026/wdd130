@@ -1,13 +1,11 @@
-/* rafting.css – FINAL VERSION */
-
-/* 1. UNIVERSAL SELECTOR RESET (what the audit is looking for) */
+/* 1. UNIVERSAL SELECTOR RESET  */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* 2. CSS VARIABLES */
+/* 2. CSS VARIABLES (colors and fonts) */
 :root {
   --primary-color: #024873;      /* dark blue */
   --secondary-color: #f4a261;    /* warm orange */
@@ -54,8 +52,8 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--accent1-color); /* slate blue bar */
-  color: var(--accent2-color);            /* light yellow text */
+  background-color: var(--accent1-color);
+  color: #ffffff;
   padding: 1rem;
 }
 
@@ -66,7 +64,7 @@ header img {
 header nav a {
   margin: 0 0.5rem;
   text-decoration: none;
-  color: var(--secondary-color); /* warm orange links */
+  color: var(--accent2-color);
   font-weight: bold;
 }
 
@@ -76,7 +74,7 @@ header nav a:hover {
 
 /* 8. HERO AREA */
 .hero {
-  position: relative;  /* so h1 & article can be absolutely positioned */
+  position: relative;  /* allows absolute positioning of h1 and article */
 }
 
 .hero img {
@@ -85,7 +83,7 @@ header nav a:hover {
   height: auto;
 }
 
-/* h1 overlay on hero image – HIGH CONTRAST (white on dark) */
+/* h1 overlay on hero image – high contrast (white on dark) */
 .hero h1 {
   position: absolute;
   top: 20px;
@@ -93,7 +91,7 @@ header nav a:hover {
   padding: 16px;
   text-align: center;
   background-color: rgba(38, 70, 83, 0.9);  /* dark overlay */
-  color: #ffffff;                            /* white text */
+  color: #ffffff;                            /* FIX: high-contrast text */
 }
 
 /* article overlay on hero image */
@@ -117,7 +115,7 @@ header nav a:hover {
 .history,
 .adventure {
   background-color: #f9f9f9;
-  border: 2px solid var(--accent2-color); /* uses accent2-color */
+  border: 2px solid var(--accent2-color);  /* uses accent2-color */
 }
 
 /* 10. FOOTER & SOCIAL MEDIA ICONS */
@@ -135,7 +133,7 @@ footer p {
   padding: 0;
 }
 
-/* social media icons */
+/* remove underlines from social media image links */
 .socialmedia a {
   text-decoration: none;
 }
