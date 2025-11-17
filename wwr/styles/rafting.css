@@ -1,0 +1,139 @@
+/* 1. CSS VARIABLES (colors and fonts) */
+:root {
+  --primary-color: #024873;     /* dark blue */
+  --secondary-color: #f4a261;   /* warm orange */
+  --accent1-color: #264653;     /* slate blue */
+  --accent2-color: #e9c46a;     /* light yellow */
+
+  --heading-font: "Georgia", "Times New Roman", serif;
+  --body-font: Arial, Helvetica, sans-serif;
+}
+
+/* 2. RESET BOX MODEL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 3. BODY STYLES */
+body {
+  font-family: var(--body-font);
+  color: var(--accent1-color);
+  background-color: #ffffff;
+}
+
+/* 4. LIMIT WIDTH AND CENTER PAGE */
+header, main, footer {
+  width: 840px;
+  margin: 0 auto;
+}
+
+/* 5. HEADINGS */
+h1, h2 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+}
+
+/* 6. BASIC SPACING */
+nav, p, section, article {
+  margin: 16px;
+  padding: 8px;
+}
+
+/* 7. HEADER & NAV */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--primary-color);
+  color: var(--accent2-color);
+  padding: 1rem;
+}
+
+header img {
+  max-height: 80px;
+}
+
+header nav a {
+  margin: 0 0.5rem;
+  text-decoration: none;
+  color: var(--accent2-color);
+  font-weight: bold;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* 8. HERO AREA */
+.hero {
+  position: relative;
+}
+
+.hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* h1 over hero image */
+.hero h1 {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  padding: 16px;
+  text-align: center;
+  background-color: var(--accent1-color);
+  color: #ffffff;
+  opacity: 0.8;
+}
+
+/* article over hero image */
+.hero article {
+  position: absolute;
+  bottom: 20px;
+  left: 50px;
+  right: 50px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 16px;
+}
+
+/* small image inside article */
+.hero article img {
+  float: right;
+  width: 125px;
+  margin-left: 16px;
+}
+
+/* 9. SECTIONS */
+.history, .adventure {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+}
+
+/* 10. FOOTER & SOCIAL MEDIA ICONS */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  padding: 1rem 0;
+  border-top: 1px solid #ccc;
+}
+
+footer p {
+  margin: 0;
+  padding: 0;
+}
+
+/* remove underlines from social media image links */
+.socialmedia a {
+  text-decoration: none;
+}
+
+.socialmedia img {
+  width: 32px;
+  height: 32px;
+  margin-left: 8px;
+}
