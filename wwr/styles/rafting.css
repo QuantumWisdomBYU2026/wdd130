@@ -1,4 +1,3 @@
-/* 1. CSS VARIABLES (colors and fonts) */
 :root {
   --primary-color: #024873;     /* dark blue */
   --secondary-color: #f4a261;   /* warm orange */
@@ -9,21 +8,19 @@
   --body-font: Arial, Helvetica, sans-serif;
 }
 
-/* 2. UNIVERSAL RESET (required by the audit) */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* 3. BODY STYLES */
 body {
   font-family: var(--body-font);
   color: var(--accent1-color);
   background-color: #ffffff;
 }
 
-/* 4. CENTER PAGE + LIMIT WIDTH */
+
 header,
 main,
 footer {
@@ -31,14 +28,13 @@ footer {
   margin: 0 auto;
 }
 
-/* 5. HEADINGS */
+
 h1,
 h2 {
   font-family: var(--heading-font);
   color: var(--primary-color);
 }
 
-/* 6. BASIC SPACING */
 nav,
 p,
 section,
@@ -47,7 +43,6 @@ article {
   padding: 8px;
 }
 
-/* 7. HEADER AREA */
 header {
   display: flex;
   align-items: center;
@@ -72,7 +67,6 @@ header nav a:hover {
   text-decoration: underline;
 }
 
-/* 8. HERO AREA */
 .hero {
   position: relative;
 }
@@ -83,7 +77,6 @@ header nav a:hover {
   height: auto;
 }
 
-/* h1 over hero image */
 .hero h1 {
   position: absolute;
   top: 20px;
@@ -95,7 +88,6 @@ header nav a:hover {
   opacity: 0.85;
 }
 
-/* Article box on hero image */
 .hero article {
   position: absolute;
   bottom: 20px;
@@ -106,21 +98,18 @@ header nav a:hover {
   border-radius: 4px;
 }
 
-/* Small image inside article */
 .hero article img {
   float: right;
   width: 125px;
   margin-left: 16px;
 }
 
-/* 9. SECTION STYLES */
 .history,
 .adventure {
   background-color: #f9f9f9;
   border: 1px solid #ddd;
 }
 
-/* REQUIRED FIX: Use --secondary-color */
 .history h2,
 .adventure h2 {
   background-color: var(--secondary-color);
@@ -129,7 +118,6 @@ header nav a:hover {
   border-radius: 4px;
 }
 
-/* 10. FOOTER */
 footer {
   display: flex;
   justify-content: space-between;
@@ -141,7 +129,6 @@ footer {
   color: white;
 }
 
-/* Social media links */
 .socialmedia a {
   text-decoration: none;
 }
