@@ -1,29 +1,29 @@
-/* 1. CSS VARIABLES (colors and fonts) */
-:root {
-  --primary-color: #024873;      /* dark blue text */
-  --secondary-color: #f4a261;    /* warm orange */
-  --accent1-color: #264653;      /* dark teal/nav bar */
-  --accent2-color: #e9c46a;      /* light yellow border */
-
-  --heading-font: "Georgia", "Times New Roman", serif;
-  --body-font: Arial, Helvetica, sans-serif;
-}
-
-/* 2. UNIVERSAL SELECTOR RESET (what the audit wants) */
+/* 0. UNIVERSAL SELECTOR RESET (exactly what the audit wants) */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* 3. BODY */
+/* 1. CSS VARIABLES (colors and fonts) */
+:root {
+  --primary-color: #024873;      /* heading text */
+  --secondary-color: #f4a261;    /* nav link color */
+  --accent1-color: #264653;      /* dark teal/nav bar */
+  --accent2-color: #e9c46a;      /* light yellow borders */
+
+  --heading-font: "Georgia", "Times New Roman", serif;
+  --body-font: Arial, Helvetica, sans-serif;
+}
+
+/* 2. BODY */
 body {
   font-family: var(--body-font);
   color: var(--accent1-color);
   background-color: #ffffff;
 }
 
-/* 4. LIMIT WIDTH AND CENTER PAGE */
+/* 3. LIMIT WIDTH AND CENTER PAGE */
 header,
 main,
 footer {
@@ -31,14 +31,17 @@ footer {
   margin: 0 auto;
 }
 
-/* 5. HEADINGS */
+/* 4. HEADINGS */
 h1,
 h2 {
   font-family: var(--heading-font);
-  color: var(--primary-color);
 }
 
-/* 6. BASIC SPACING */
+h2 {
+  color: var(--primary-color);  /* uses primary color */
+}
+
+/* 5. BASIC SPACING */
 nav,
 p,
 section,
@@ -47,13 +50,13 @@ article {
   padding: 8px;
 }
 
-/* 7. HEADER & TOP NAVIGATION */
+/* 6. HEADER & TOP NAVIGATION */
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--accent1-color);  /* dark teal bar */
-  color: #ffffff;                          /* white text in header */
+  background-color: var(--accent1-color); /* dark bar */
+  color: #ffffff;                         /* white text for contrast */
   padding: 1rem;
 }
 
@@ -64,7 +67,7 @@ header img {
 header nav a {
   margin: 0 0.5rem;
   text-decoration: none;
-  color: var(--secondary-color);           /* uses secondary-color */
+  color: var(--secondary-color);          /* uses secondary color */
   font-weight: bold;
 }
 
@@ -72,7 +75,7 @@ header nav a:hover {
   text-decoration: underline;
 }
 
-/* 8. HERO AREA */
+/* 7. HERO AREA */
 .hero {
   position: relative;
 }
@@ -90,7 +93,7 @@ header nav a:hover {
   width: 100%;
   padding: 16px;
   text-align: center;
-  background-color: rgba(38, 70, 83, 0.9);  /* dark bar */
+  background-color: rgba(38, 70, 83, 0.9);  /* dark overlay */
   color: #ffffff;                           /* white text: good contrast */
 }
 
@@ -102,7 +105,8 @@ header nav a:hover {
   right: 50px;
   background-color: rgba(255, 255, 255, 0.95);
   padding: 16px;
-  color: #000000;                           /* black on white */
+  color: #000000;
+  border: 2px solid var(--secondary-color); /* uses secondary again */
 }
 
 /* small image inside article */
@@ -112,14 +116,14 @@ header nav a:hover {
   margin-left: 16px;
 }
 
-/* 9. CONTENT SECTIONS */
+/* 8. CONTENT SECTIONS */
 .history,
 .adventure {
   background-color: #f9f9f9;
-  border: 2px solid var(--accent2-color);  /* uses accent2-color */
+  border: 2px solid var(--accent2-color);  /* uses accent2 color */
 }
 
-/* 10. FOOTER & SOCIAL MEDIA ICONS */
+/* 9. FOOTER & SOCIAL MEDIA ICONS */
 footer {
   display: flex;
   justify-content: space-between;
