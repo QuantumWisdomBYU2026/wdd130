@@ -1,19 +1,19 @@
-/* 1. UNIVERSAL SELECTOR RESET  */
+/* 1. CSS VARIABLES (colors and fonts) */
+:root {
+  --primary-color: #024873;      /* dark blue text */
+  --secondary-color: #f4a261;    /* warm orange */
+  --accent1-color: #264653;      /* dark teal/nav bar */
+  --accent2-color: #e9c46a;      /* light yellow border */
+
+  --heading-font: "Georgia", "Times New Roman", serif;
+  --body-font: Arial, Helvetica, sans-serif;
+}
+
+/* 2. UNIVERSAL SELECTOR RESET (what the audit wants) */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-/* 2. CSS VARIABLES (colors and fonts) */
-:root {
-  --primary-color: #024873;      /* dark blue */
-  --secondary-color: #f4a261;    /* warm orange */
-  --accent1-color: #264653;      /* slate blue */
-  --accent2-color: #e9c46a;      /* light yellow */
-
-  --heading-font: "Georgia", "Times New Roman", serif;
-  --body-font: Arial, Helvetica, sans-serif;
 }
 
 /* 3. BODY */
@@ -47,13 +47,13 @@ article {
   padding: 8px;
 }
 
-/* 7. HEADER & TOP NAV */
+/* 7. HEADER & TOP NAVIGATION */
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--accent1-color);
-  color: #ffffff;
+  background-color: var(--accent1-color);  /* dark teal bar */
+  color: #ffffff;                          /* white text in header */
   padding: 1rem;
 }
 
@@ -64,7 +64,7 @@ header img {
 header nav a {
   margin: 0 0.5rem;
   text-decoration: none;
-  color: var(--accent2-color);
+  color: var(--secondary-color);           /* uses secondary-color */
   font-weight: bold;
 }
 
@@ -74,7 +74,7 @@ header nav a:hover {
 
 /* 8. HERO AREA */
 .hero {
-  position: relative;  /* allows absolute positioning of h1 and article */
+  position: relative;
 }
 
 .hero img {
@@ -83,18 +83,18 @@ header nav a:hover {
   height: auto;
 }
 
-/* h1 overlay on hero image – high contrast (white on dark) */
+/* hero heading overlay */
 .hero h1 {
   position: absolute;
   top: 20px;
   width: 100%;
   padding: 16px;
   text-align: center;
-  background-color: rgba(38, 70, 83, 0.9);  /* dark overlay */
-  color: #ffffff;                            /* FIX: high-contrast text */
+  background-color: rgba(38, 70, 83, 0.9);  /* dark bar */
+  color: #ffffff;                           /* white text: good contrast */
 }
 
-/* article overlay on hero image */
+/* hero article overlay */
 .hero article {
   position: absolute;
   bottom: 20px;
@@ -102,6 +102,7 @@ header nav a:hover {
   right: 50px;
   background-color: rgba(255, 255, 255, 0.95);
   padding: 16px;
+  color: #000000;                           /* black on white */
 }
 
 /* small image inside article */
@@ -126,6 +127,7 @@ footer {
   margin-top: 2rem;
   padding: 1rem 0;
   border-top: 1px solid #ccc;
+  color: #000000;
 }
 
 footer p {
@@ -133,7 +135,6 @@ footer p {
   padding: 0;
 }
 
-/* remove underlines from social media image links */
 .socialmedia a {
   text-decoration: none;
 }
